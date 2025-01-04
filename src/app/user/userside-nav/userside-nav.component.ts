@@ -10,6 +10,11 @@ import { MyService } from '../../my-service.service';
 export class UsersideNavComponent {
   isOpen:boolean = false;
   constructor(private apiService: ApiService, private service: MyService) { }
+  isMenuOpen: boolean = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   logOut() {
     try {
       // console.log('logout');
@@ -57,13 +62,7 @@ export class UsersideNavComponent {
   }
 
 
-  toggleNav() {
-    this.isOpen = !this.isOpen;
-  }
-
-  closeNav() {
-    this.isOpen = false;
-  }
+ 
 
 
 }

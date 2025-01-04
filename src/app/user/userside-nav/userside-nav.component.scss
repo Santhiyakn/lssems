@@ -1,127 +1,164 @@
 
   
-//   .sidenav {
-//     height: 100%;
-//     width: 250px;
-//     position: left;
-//     background-color:rgb(92, 198, 240);
-//     padding-top: 20px;
-//     padding-bottom: 100px;
-//   }
-  
-  
-//   .sidenav ul {
-//     list-style-type: none;
-//     padding: 0;
-//   }
-  
-//   .sidenav ul li {
-//     text-align: center;
-//     position: relative; /* For positioning dropdown */
-//   }
-  
-//   .sidenav ul li a {
-//     padding: 15px;
-//     text-decoration: none;
-//     color: white;
-//     display: block;
-//   }
-  
-//   .sidenav ul li a:hover {
-//     background-color:rgb(69, 144, 241)
-//   }
-  
-//   .submenu {
-//     // position: absolute; /* Position relative to parent */
-//     // left: 100%; /* Align to the right of the parent */
-//     // top: 0; /* Align at the top */
-//     background-color: rgb(31, 159, 223); /* Dropdown background */
-//     min-width: 150px; /* Minimum width of dropdown */
-//     z-index: -1; /* Ensure it appears above other content */
-//   }
-  
-// //   .submenu li {
-// //     text-align: left; /* Align text to the left */
-// //   }
-  
-// //   .has-submenu {
-// //     color: black;
-// //   }
 
-/* General styling for the sidenav */
-.sidenav {
-  width: 250px;
-  background-color:  #0288d1; /* Blue color matching the theme */
-  height: 80vh; /* Full height */
-  position: fixed; /* Fixed position on the left */
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  margin-top: 8%;
+  
+
+// /* General styling for the sidenav */
+// .sidenav {
+//   width: 250px;
+//   background-color:  #0288d1; /* Blue color matching the theme */
+//   height: 80vh; /* Full height */
+//   position: fixed; /* Fixed position on the left */
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   flex-direction: column;
+//   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+//   margin-top: 8%;
+// }
+
+// /* Style for the list */
+// .sidenav ul {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// /* Style for each list item */
+// .sidenav ul li {
+//   padding: 20px 15px;
+//   text-align: center;
+// }
+
+// /* Style for the links */
+// .sidenav ul li a {
+//   padding: 10px;
+//   text-decoration: none;
+//   color: white;
+//   font-size: 16px;
+//   font-weight: bold;
+//   display: block;
+//   transition: background-color 0.3s, color 0.3s;
+// }
+
+// /* Hover effect for links */
+// .sidenav ul li a:hover {
+//   background-color: #005A9E; /* Darker blue for hover */
+//   color: #FFF; /* Keep text white */
+//   border-radius: 25px;
+// }
+
+
+  
+
+// /* Responsive Design for Smaller Screens */
+// @media screen and (max-width: 768px) {
+//   .side-nav.open {
+//       width: 200px; /* Adjust width for tablets */
+//   }
+
+//   .side-nav a {
+//       font-size: 18px; /* Smaller font size for smaller screens */
+//   }
+
+//   .side-nav .close-btn {
+//       font-size: 30px; /* Adjust close button size */
+//   }
+// }
+
+// @media screen and (max-width: 480px) {
+//   .side-nav.open {
+//       width: 150px; /* Adjust width for mobile screens */
+//   }
+
+//   .side-nav a {
+//       font-size: 16px; /* Smaller font size for mobile screens */
+//   }
+
+//   .open-btn {
+//       font-size: 16px; /* Adjust toggle button size */
+//       padding: 8px 10px; /* Smaller padding for mobile screens */
+//   }
+// }
+
+
+
+/* Sidenav Container */
+.sidenav-container {
+  position: relative;
 }
 
-/* Style for the list */
+/* Toggle Button */
+.menu-toggle {
+  margin-top: 4%;
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #0288d1; /* Blue background */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+.menu-toggle:hover {
+  background-color: #003a8c; /* Darker blue on hover */
+}
+
+/* Side Navigation */
+.sidenav {
+  margin-top: 9%;
+  height: 80%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  background-color: #0288d1; /* Blue background */
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 20px;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidenav.open {
+  left: 0; /* Slide into view */
+}
+
 .sidenav ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-/* Style for each list item */
 .sidenav ul li {
-  padding: 20px 15px;
-  text-align: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #003a8c; /* Border in darker blue */
 }
 
-/* Style for the links */
 .sidenav ul li a {
-  padding: 10px;
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: #fff;
   font-weight: bold;
   display: block;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect for links */
+.sidenav ul li:hover {
+  background-color: #003a8c; /* Darker blue on hover */
+}
+
 .sidenav ul li a:hover {
-  background-color: #005A9E; /* Darker blue for hover */
-  color: #FFF; /* Keep text white */
-  border-radius: 25px;
+  color: #d3e9ff; /* Lighter blue for text on hover */
 }
 
-
-  
-
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .side-nav.open {
-      width: 200px; /* Adjust width for tablets */
-  }
-
-  .side-nav a {
-      font-size: 18px; /* Smaller font size for smaller screens */
-  }
-
-  .side-nav .close-btn {
-      font-size: 30px; /* Adjust close button size */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .side-nav.open {
-      width: 150px; /* Adjust width for mobile screens */
-  }
-
-  .side-nav a {
-      font-size: 16px; /* Smaller font size for mobile screens */
-  }
-
-  .open-btn {
-      font-size: 16px; /* Adjust toggle button size */
-      padding: 8px 10px; /* Smaller padding for mobile screens */
+  .sidenav {
+    width: 100%; /* Full width on smaller screens */
   }
 }

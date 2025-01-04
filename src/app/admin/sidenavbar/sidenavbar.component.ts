@@ -9,6 +9,11 @@ export class SidenavbarComponent {
   categoriesVisible: boolean = false;
   personVisible: boolean = false;
   pagesVisible: boolean = false;
+  isMenuOpen: boolean = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   toggleCategories() {
     try {

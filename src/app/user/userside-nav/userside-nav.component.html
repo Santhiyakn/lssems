@@ -1,22 +1,19 @@
-
-<div class="sidenav" >
-    <ul>
-
+<div class="sidenav-container">
+    <button class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </button>
+  
+    <div class="sidenav" [class.open]="isMenuOpen">
+      <ul>
         <li><a routerLink="/user/categories">CATEGORIES</a></li>
-
         <li><a routerLink="/user/companies">COMPANIES</a></li>
-
         <li><a routerLink="/user/profile">MY PROFILE</a></li>
-
         <li><a routerLink="/user/login" (click)="logOut()">LOGOUT</a></li>
-
         <li><a routerLink="/user/about-us" (click)="aboutUs()">ABOUT US</a></li>
-
         <li><a routerLink="/user/contact-us" (click)="contactUs()">CONTACT US</a></li>
-
-       
-    </ul>
-</div>
-
-<router-outlet/>
-
+      </ul>
+    </div>
+  
+    <router-outlet></router-outlet>
+  </div>
+  

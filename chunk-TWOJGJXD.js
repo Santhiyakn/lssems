@@ -1,0 +1,1 @@
+import{k as r}from"./chunk-XDOW7T3A.js";var t=class e{constructor(){}iscreated=!0;token="";personCreate=!0;personView=!1;aboutUs="";contactUs="";userToken="";userId="";isUpdateUser=!1;ServiceProviders=[];isAboutUsPage=!1;static \u0275fac=function(o){return new(o||e)};static \u0275prov=r({token:e,factory:e.\u0275fac,providedIn:"root"})};export{t as a};

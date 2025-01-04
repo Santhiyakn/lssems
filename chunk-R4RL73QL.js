@@ -1,1 +1,0 @@
-import{a}from"./chunk-UHYMZBTT.js";import"./chunk-OU56AEV4.js";import"./chunk-47M35D6R.js";import"./chunk-62Y5HVUV.js";import"./chunk-TWOJGJXD.js";import"./chunk-XDOW7T3A.js";export{a as PersonChangeModule};

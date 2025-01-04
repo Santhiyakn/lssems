@@ -1,0 +1,34 @@
+<div class="user-page">
+    <div>
+      <app-sidenavbar></app-sidenavbar>
+    </div>
+    <div class="user-list-page">
+      <table>
+        <tr>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>PHONE NUMBER</th>
+          <th>ROLE</th>
+          <th>DELETE</th>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td>
+            <img
+              src="https://parspng.com/wp-content/uploads/2022/07/tickpng.parspng.com-4.png"
+              alt="Verified"
+              class="verified-icon"
+              *ngIf="user.isVerified"
+            />
+            {{ user.name }}
+          </td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phoneNumber }}</td>
+          <td>{{ user.role }}</td>
+          <td *ngIf="user.role != 'admin'">
+            <button (click)="deleteUser(user._id)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

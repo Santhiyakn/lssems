@@ -1,0 +1,103 @@
+.userLoginForm{
+    width: 200px;
+    height: 200px;
+   
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+
+.signUp{
+    margin-left: 80%;
+    margin-top: 5%;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.userLoginForm {
+    background-color: #ffffff; /* White form background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px 40px;
+    width: 300px;
+    text-align: center;
+}
+
+label {
+    font-size: 14px;
+    color: #0277bd; /* Dark blue for labels */
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b3e5fc; /* Light blue border */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0288d1; /* Focused border color */
+    box-shadow: 0 0 4px #81d4fa;
+}
+
+.errmsg {
+    color: #d32f2f; /* Red for error messages */
+    font-size: 12px;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0288d1; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0277bd; /* Slightly darker blue on hover */
+}
+
+.signUp button {
+    background-color: transparent;
+    color: #0288d1; /* Blue text */
+    border: 2px solid #0288d1;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signUp button:hover {
+    background-color: #0288d1;
+    color: white;
+}

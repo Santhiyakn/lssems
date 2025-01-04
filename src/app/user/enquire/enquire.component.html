@@ -1,0 +1,11 @@
+<div class="enquire">
+  <div>
+      <app-userside-nav></app-userside-nav>
+  </div>
+  <div class="enquire-page">
+      <h5>Enquire Question:</h5>
+      <p class="note">(note: Enquire question should be below 100 words)</p>
+      <textarea [(ngModel)]="question" class="enquire-textarea" placeholder="Write your question here..."></textarea>
+      <button class="submit-btn" type="button" (click)="enquire()">Submit</button>
+  </div>
+</div>

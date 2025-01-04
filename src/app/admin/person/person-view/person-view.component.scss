@@ -1,0 +1,88 @@
+/* General Styling for the View Page */
+.view-page {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    margin-left: 20%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #0277bd;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #b3e5fc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f7f9fc;
+    color: #333;
+    cursor: not-allowed;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0288d1;
+    box-shadow: 0 0 4px #81d4fa;
+}
+
+/* Feedback Section */
+.feedback {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.btn-delete-feedback {
+    background-color: #e57373;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete-feedback:hover {
+    background-color: #ef5350;
+}
+
+/* Back Button Styling */
+.btn-back {
+    background-color: #ef5350;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 80%;
+}
+
+.btn-back:hover {
+    background-color: #ef5350;
+}

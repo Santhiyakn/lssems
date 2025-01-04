@@ -1,0 +1,52 @@
+
+  
+
+
+  
+
+.sidenav {
+  width: 250px;
+  background-color:  #0288d1; /* Blue color matching the theme */
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed position on the left */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+}
+
+/* Style for the list */
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+
+/* Style for each list item */
+.sidenav ul li {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+/* Style for the links */
+.sidenav ul li a {
+  padding: 18px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for links */
+.sidenav ul li a:hover {
+  background-color: #005A9E; /* Darker blue for hover */
+  color: #FFF; /* Keep text white */
+  border-radius: 25px;
+  
+}
+
+  

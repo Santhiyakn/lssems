@@ -1,0 +1,36 @@
+<div class="categories">
+    <div>
+      <app-sidenavbar></app-sidenavbar>
+    </div>
+    <div class="categoriesPage">
+      <button routerLink="/admin/categories/create" (click)="create()" class="btn-create">
+        CREATE
+      </button>
+      <table class="categories-table">
+        <tr>
+          <th>CATEGORY NAME</th>
+          <th>UPDATE</th>
+          <th>DELETE</th>
+        </tr>
+        <tr *ngFor="let service of services">
+          <td>{{ service.name }}</td>
+          <td>
+            <button
+              [routerLink]="['/admin/categories/update']"
+              [queryParams]="{ id: service._id }"
+              (click)="update()"
+              class="btn-update"
+            >
+              UPDATE
+            </button>
+          </td>
+          <td>
+            <button (click)="deleteService(service._id)" class="btn-delete">
+              DELETE
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

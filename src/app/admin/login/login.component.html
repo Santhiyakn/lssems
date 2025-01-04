@@ -1,0 +1,34 @@
+<div class="adminLoginForm">
+    <form [formGroup]="adminloginForm" (ngSubmit)="onSubmit()">
+        <label for="adminId">Admin ID: </label>
+        <input id="adminId" type="text" formControlName="adminId" required />
+        <div *ngIf="adminloginForm.get('adminId')?.touched && adminloginForm.get('adminId')?.value===''">
+            <p class="errmsg">Invalid admin ID</p>
+        </div>
+        <div *ngIf="isSubmitted">
+            <p class="errmsg">{{adminIdERR}}</p>
+        </div>
+
+        <label for="password">Password : </label>
+        <input id="password" type="password" formControlName="password">
+        <div *ngIf="adminloginForm.get('password')?.touched && adminloginForm.get('password')?.value===''">
+            <p class="errmsg">Invalid password</p>
+        </div>
+        <div *ngIf="isSubmitted">
+            <p class="errmsg">{{passwordERR}}</p>
+        </div>
+        
+        <br />
+        <!-- <button type="button" class="btn-forget" (click)="forgetPassword()">Forget Password</button> -->
+        
+        <!-- <div *ngIf="isForget()">
+            <p>Question: What is your name?</p>
+            <label>Answer:</label>
+            <input id="forgetPassword" type="text" formControlName="forgetPassword">
+        </div> -->
+        <br />
+        <br />
+
+        <button type="submit" class="btn-submit">LogIn</button>
+    </form>
+</div>

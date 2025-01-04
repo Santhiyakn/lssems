@@ -1,0 +1,121 @@
+
+
+.sidenav {
+  width: 200px; /* Fixed width for the sidenav */
+  background-color: #0078D4; /* Blue theme color */
+  height: 100vh; /* Full height */
+  position: fixed; /* Stay fixed on the left */
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  // padding-top: 20px;
+  margin-top: 20%; /* Optional padding for the links */
+}
+.user-companies-page {
+  margin-left: 250px; /* Matches the sidenav width */
+  padding: 20px;
+  flex-grow: 1; /* Take the remaining space */
+  overflow: auto; /* Handle scrolling */
+}
+
+.filterButton{
+  margin-left: 10px;
+}
+
+.searchButton{
+  margin-left: 90%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+thead th {
+  background-color: #0288d1; /* Blue header */
+  color: white;
+  padding: 10px;
+  text-align: left; /* Align header text to the left */
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Light gray border for rows */
+}
+
+td,
+th {
+  text-align: left; /* Align content to the left */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; /* Light gray hover effect */
+}
+
+
+
+
+
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0288d1; /* Blue button */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background-color: #0277bd; /* Darker blue for active page */
+}
+
+.pagination button:hover {
+  background-color: #0277bd;
+}
+
+input[type="text"], select {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #b3e5fc; /* Light blue border */
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+
+button {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0277bd;
+}
+
+.noFilterbutton{
+  margin-left: 90%;
+}
+
+
+

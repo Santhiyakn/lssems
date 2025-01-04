@@ -1,0 +1,35 @@
+<div class="pages-page">
+  <h2>Sign Up</h2>
+  
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" [(ngModel)]="name">
+  
+  <br>
+  <label for="phoneNumber">Phone Number</label>
+  <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber">
+
+  <br>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" [(ngModel)]="email">
+
+  <br>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password">
+
+  <br>
+  <label for="verifyPassword">Re-Enter Password</label>
+  <input type="password" id="verifyPassword" name="verifyPassword" [(ngModel)]="verifyPassword">
+
+  <br><br>
+  <button class="verify-btn" type="button" (click)="verifyEmail()">Verify Email</button>
+
+  <br>
+
+  <div *ngIf="isVerifyEmail"> 
+      <label for="otp">OTP</label>
+      <input type="text" id="otp" name="otp" [(ngModel)]="otp">
+      <br>
+    
+      <button class="signup-btn" type="button" (click)="signUp()">Sign Up</button>
+  </div>
+</div>

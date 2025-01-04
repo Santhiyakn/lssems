@@ -1,0 +1,25 @@
+<div class="categoriesCreate">
+    <div>
+      <app-sidenavbar></app-sidenavbar>
+    </div>
+   
+    <div *ngIf="isCreatePage" class="form-container">
+        <button class="back-btn" [routerLink]="['/admin/categories']" type="button">Back</button>
+        
+      <form [formGroup]="serviceCreateForm" (ngSubmit)="createService()">
+        <label for="categoryName">Category Name</label><br />
+        <input type="text" id="categoryName" name="categoryName" formControlName="serviceName" />
+        <br />
+        <button type="submit" class="btn-submit">ADD</button>
+      </form>
+    </div>
+    <div *ngIf="!isCreatePage" class="form-container">
+        <button class="back-btn" [routerLink]="['/admin/categories']" type="button">Back</button>
+        <br>
+      <label for="categoryName">Category Name</label><br />
+      <input type="text" id="categoryName" name="categoryName" [(ngModel)]="updateServiceName" />
+      <br />
+      <button type="submit" (click)="updateService()" class="btn-submit">UPDATE</button>
+    </div>
+  </div>
+  

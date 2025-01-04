@@ -1,0 +1,135 @@
+<div class="person-change">
+  <div>
+    <app-sidenavbar></app-sidenavbar>
+  </div>
+
+  <div class="form-container" *ngIf="isCreatePage">
+    <button [routerLink]="['/admin/person']" class="btn-back" type="button">Back</button>
+
+    <h2>Create Person</h2>
+    <form [formGroup]="createPersonForm" (ngSubmit)="createPerson()">
+      <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" formControlName="companyName">
+      </div>
+
+      <div class="form-group">
+        <label for="serviceProviderName">Service Provider Name</label>
+        <input type="text" id="serviceProviderName" name="serviceProviderName" formControlName="serviceProviderName">
+      </div>
+
+      <div class="form-group">
+        <label for="serviceType">Service Type</label>
+        <select id="serviceType" formControlName="serviceType">
+          <option *ngFor="let service of services" [value]="service._id">{{ service.name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" formControlName="phoneNumber">
+      </div>
+
+      <div class="form-group">
+        <label>Location:</label>
+        <label for="locationCity">City:</label>
+        <input type="text" id="locationCity" name="locationCity" formControlName="locationCity">
+        <label for="locationState">State:</label>
+        <input type="text" id="locationState" name="locationState" formControlName="locationState">
+        <label for="locationCountry">Country:</label>
+        <input type="text" id="locationCountry" name="locationCountry" formControlName="locationCountry">
+      </div>
+
+      <div class="form-group">
+        <label for="locationsAvailable">Locations Available:</label>
+        <div formArrayName="locationsAvailable">
+          <div *ngFor="let location of locationsAvailable.controls; let i = index" class="location-item">
+            <input [formControlName]="i" placeholder="Enter value">
+            <button class="btn-remove" type="button" (click)="removeItem(i)">Remove</button>
+          </div>
+        </div>
+        <button class="btn-add" type="button" (click)="addItem()">Add Item</button>
+      </div>
+
+      <div class="form-group">
+        <label for="serviceDescription">Service Description</label>
+        <input type="text" id="serviceDescription" name="serviceDescription" formControlName="serviceDescription">
+      </div>
+
+      <div class="form-group">
+        <label for="photo">Photo</label>
+        <input type="text" id="photo" name="photo" formControlName="photo">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" formControlName="email">
+      </div>
+
+      <div class="form-group">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" formControlName="website">
+      </div>
+
+      <button class="btn-submit" type="submit">Add</button>
+    </form>
+  </div>
+
+  <div class="form-container" *ngIf="!isCreatePage">
+    <button [routerLink]="['/admin/person']" class="btn-back" type="button">Back</button>
+    <h2>Update Person</h2>
+    <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input type="text" id="companyName" name="companyName" [(ngModel)]="updateCompanyName">
+    </div>
+
+    <div class="form-group">
+      <label for="serviceProviderName">Person Name</label>
+      <input type="text" id="serviceProviderName" name="serviceProviderName" [(ngModel)]="updateserviceProviderName">
+    </div>
+
+    <div class="form-group">
+      <label for="serviceType">Service Type</label>
+      <select id="serviceType" [(ngModel)]="updateserviceType">
+        <option *ngFor="let service of services" [value]="service._id">{{ service.name }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="updatephoneNumber">
+    </div>
+
+    <div class="form-group">
+      <label>Location</label>
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" [(ngModel)]="updatecity">
+      <label for="state">State</label>
+      <input type="text" id="state" name="state" [(ngModel)]="updatestate">
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" [(ngModel)]="updatecountry">
+    </div>
+
+    <div class="form-group">
+      <label for="website">Website</label>
+      <input type="text" id="website" name="website" [(ngModel)]="updatewebsite">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" [(ngModel)]="updateEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="photo">Photo</label>
+      <input type="text" id="photo" name="photo" [(ngModel)]="updatephoto">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" [(ngModel)]="updateserviceDescription">
+    </div>
+
+    <button class="btn-submit" type="button" (click)="updatePerson()">Update</button>
+  </div>
+</div>

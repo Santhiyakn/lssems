@@ -1,0 +1,72 @@
+<div class="person-view">
+    <div>
+        <app-sidenavbar></app-sidenavbar>
+    </div>
+    <div class="view-page">
+        <button [routerLink]="['/admin/person']" class="btn-back" type="button">Back</button>
+        <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" id="companyName" name="companyName" [(ngModel)]="person.companyName" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Person Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="person.serviceProviderName" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="serviceType">Service Type</label>
+            <input type="text" id="serviceType" name="serviceType" [(ngModel)]="person.serviceType" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="person.phoneNumber.phoneNumber" disabled>
+        </div>
+
+        <div class="form-group">
+            <label>Location</label>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" [(ngModel)]="person.location.city" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" [(ngModel)]="person.location.state" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" [(ngModel)]="person.location.country" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" [(ngModel)]="person.website.website" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" [(ngModel)]="person.email" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Photo</label>
+            <input type="text" id="photo" name="photo" [(ngModel)]="person.photo.photo" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" [(ngModel)]="person.serviceDescription" disabled>
+        </div>
+
+        <div *ngFor="let feedBack of feedBacks" class="feedback">
+            <p><strong>User ID:</strong> {{feedBack.userId.slice(-4)}}</p>
+            <p><strong>Rating:</strong> {{feedBack.rating}}</p>
+            <p><strong>Review:</strong> {{feedBack.review}}</p>
+            <button class="btn-delete-feedback" type="button" (click)="deleteFeedBack(feedBack._id)">Delete</button>
+        </div>
+
+       
+    </div>
+</div>

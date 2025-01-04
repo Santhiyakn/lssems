@@ -1,0 +1,42 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #0288d1; /* Blue background for the header */
+    color: white; /* White text for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header .admin {
+    background-color: white; /* White button background */
+    color: #0288d1; /* Blue text for button */
+    border: 2px solid #0288d1; /* Blue border */
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .admin:hover {
+    background-color: #0277bd; /* Darker blue on hover */
+    color: white; /* White text on hover */
+}
+
+
+

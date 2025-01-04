@@ -1,0 +1,90 @@
+/* General Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078D4; /* Blue theme */
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Admin Button Styling */
+  .admin-btn {
+    background-color: white;
+    color: #0078D4;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .admin-btn:hover {
+    background-color: #005A9E;
+    color: white;
+  }
+  
+  /* Sidebar Styling */
+  .user-categories > div:first-child {
+    width: 200px;
+    background-color: #0078D4;
+    height: 100vh;
+    position: fixed;
+    top: 50px; /* Adjust for header height */
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Content Area Styling */
+  .user-categories-page {
+    margin-left: 200px; /* Align to the right of sidebar */
+    padding-top: 70px; /* Adjust for fixed header */
+    padding-left: 20px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 20%;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #f7f1f1;
+   
+  }
+  .service{
+    margin-left: 38%;
+  }
+  td{
+    margin-left: 50%;
+  }
+
+  
+  th {
+    background-color: #0078D4;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

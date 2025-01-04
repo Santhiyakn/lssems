@@ -1,0 +1,32 @@
+<div class="person">
+    <div>
+        <app-sidenavbar></app-sidenavbar>
+    </div>
+    <div class="person-page">
+        <button class="btn-create" routerLink="/admin/person/create" (click)="createPerson()">CREATE</button>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>COMPANY NAME</th>
+                    <th>VIEW</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of persons">
+                    <td>{{person.companyName}}</td>
+                    <td>
+                        <button class="btn-view" [routerLink]="['/admin/person/view']" [queryParams]="{id:person._id}" (click)="viewPerson()">View</button>
+                    </td>
+                    <td>
+                        <button class="btn-update" [routerLink]="['/admin/person/update']" [queryParams]="{id:person._id}" (click)="updatePerson()">UPDATE</button>
+                    </td>
+                    <td>
+                        <button class="btn-delete" (click)="deletePerson(person._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

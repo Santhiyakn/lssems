@@ -1,0 +1,27 @@
+<div class="signUp">
+<button type="button" [routerLink]="['/user/signup']">SigUp</button>
+</div>
+<div class="userLoginForm">
+    <form [formGroup]="userloginForm" (ngSubmit)="onSubmit()">
+
+        <label for="email">Email ID: </label>
+        <input id="email" type="email" formControlName="email" required />
+        <div *ngIf="userloginForm.get('email')?.touched && userloginForm.get('email')?.value===''">
+            <p class="errmsg">Invalide email Id</p>
+        </div>
+        <br>
+        <br>
+       
+
+        <label for="password">Password : </label>
+        <input id="password" type="password" formControlName="password">
+        <div *ngIf="userloginForm.get('password')?.touched && userloginForm.get('password')?.value===''">
+            <p class="errmsg">Invalide password</p>
+        </div>
+        
+        <br />
+        <br />
+        <button type="submit">LogIn</button>
+
+    </form>
+</div>

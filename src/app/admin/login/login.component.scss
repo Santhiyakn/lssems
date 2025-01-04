@@ -1,0 +1,86 @@
+
+.adminLoginForm {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    width: 300px;
+    margin: auto;
+    background-color: #f5f5f5;
+    margin-top: 8%; 
+}
+
+.adminLoginForm label {
+    font-size: 14px;
+    color: #0277bd; /* Dark blue for labels */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields Styling */
+.adminLoginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b3e5fc; /* Light blue border */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Focused Input Field Styling */
+.adminLoginForm input:focus {
+    outline: none;
+    border-color: #0288d1;
+    box-shadow: 0 0 4px #81d4fa;
+}
+
+/* Error Message Styling */
+.errmsg {
+    color: #d32f2f; /* Red for error messages */
+    font-size: 12px;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Forget Password Button */
+.btn-forget {
+    background-color: transparent;
+    color: #0288d1;
+    border: 2px solid #0288d1;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.btn-forget:hover {
+    background-color: #0288d1;
+    color: white;
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #0288d1; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 40%;
+}
+
+.btn-submit:hover {
+    background-color: #0277bd; /* Slightly darker blue on hover */
+}
+
+/* Styling for the Form */
+.adminLoginForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

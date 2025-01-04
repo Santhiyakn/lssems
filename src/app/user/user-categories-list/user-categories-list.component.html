@@ -1,0 +1,18 @@
+<div class="user-Categories">
+    <div>
+        <app-userside-nav></app-userside-nav>
+    </div>
+    <div class="user-categories-page">
+        <table>
+           <tr>
+                <th>Category</th>
+            </tr>
+            <tr>
+                <div *ngFor="let service of services" class="service">
+                    <td>{{service.name}}</td>
+                </div>
+            </tr>
+        </table>
+
+    </div>
+</div>

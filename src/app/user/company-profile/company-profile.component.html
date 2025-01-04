@@ -1,0 +1,76 @@
+<div class="company-view">
+    <div>
+        <app-userside-nav></app-userside-nav>
+    </div>
+    <button class="back-btn" [routerLink]="['/user/companies']" type="button">Back</button>
+    <div class="company-profile-page">
+        
+        <div class="company-img-container">
+            <img src="{{company.photo.photo}}" alt="company_img" class="company-img" />
+        </div>
+
+        <div class="company-details">
+            <div class="company-detail">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" name="companyName" [(ngModel)]="company.companyName" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="name">Person Name</label>
+                <input type="text" id="name" name="name" [(ngModel)]="company.serviceProviderName" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="serviceType">Service Type</label>
+                <input type="text" id="serviceType" name="serviceType" [(ngModel)]="company.serviceType" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="company.phoneNumber.phoneNumber" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" [(ngModel)]="company.location.city" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" [(ngModel)]="company.location.state" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" [(ngModel)]="company.location.country" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" [(ngModel)]="company.website.website" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" [(ngModel)]="company.email" disabled />
+            </div>
+
+            <div class="company-detail">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" [(ngModel)]="company.serviceDescription" disabled />
+            </div>
+
+            <button class="enquire-btn" [routerLink]="['/user/enquire']" [queryParams]="{id:companyId}">Enquire</button>
+
+            <div class="feedbacks">
+                <div *ngFor="let feedBack of feedBacks" class="feedback">
+                    <p><strong>User ID:</strong> {{feedBack.userId.slice(-4)}}</p>
+                    <p><strong>Rating:</strong> {{feedBack.rating}}</p>
+                    <p><strong>Review:</strong> {{feedBack.review}}</p>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+</div>

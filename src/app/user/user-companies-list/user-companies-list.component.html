@@ -1,0 +1,76 @@
+<div class="user-companies">
+  <div class="sidenav">
+    <app-userside-nav></app-userside-nav>
+  </div>
+  <div class="user-companies-page">
+    <div class="search-container">
+    <input type="text" id="companyName" name="companyName" [(ngModel)]="filterCompanyName" />
+    <button type="button" (click)="search()" class="searchButton">SEARCH</button>
+  </div>
+    <div class="filter">
+    <button type="button" (click)="isFilterData()" class="filterButton">Filter</button>
+    <div *ngIf="isFilter">
+      <label for="serviceType">Service Type</label>
+      <select id="serviceType" [(ngModel)]="filterService">
+        <option [value]=" "></option>
+        <option *ngFor="let service of services" [value]="service._id">{{ service.name }}</option>
+      </select>
+      <br />
+      <label for="rating">Rating</label>
+      <select id="rating" [(ngModel)]="filterRating">
+        <option [value]=" "></option>
+        <option [value]="1">{{1}}</option>
+        <option [value]="2">{{2}}</option>
+        <option [value]="3">{{3}}</option>
+        <option [value]="4">{{4}}</option>
+        <option [value]="5">{{5}}</option>
+      </select>
+      <br />
+      <button type="button" (click)="filter()">Apply</button>
+      <button type="button" (click)="nofilter()" class="noFilterbutton">No Filter</button>
+    </div>
+  </div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Company Details
+            <span *ngIf="sortColumn === 'companyName'">
+              <span (click)="onSort('companyName')" *ngIf="sortOrder === 'asce'">▲</span>
+              <span (click)="onSort('companyName')" *ngIf="sortOrder === 'desc'">▼</span>
+            </span>
+          </th>
+          <th>Service Type</th>
+          <th>View</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serviceProvider of getServiceProviders">
+          <td>{{ serviceProvider.companyName }}</td>
+          <td>{{ getServiceName(serviceProvider.serviceType) }}</td>
+          <td>
+            <button
+              type="button"
+              [routerLink]="['/user/company-profile']"
+              [queryParams]="{ id: serviceProvider._id }"
+              (click)="toViewpage()"
+            >
+              View
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <div class="pagination">
+        <button
+          *ngFor="let page of pages"
+          [class.active]="page === currentPage"
+          (click)="onPageClick(page)"
+        >
+          {{ page }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

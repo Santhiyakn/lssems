@@ -1,0 +1,19 @@
+<div class="pages">
+  <div>
+    <app-sidenavbar></app-sidenavbar>
+  </div>
+  <div class="pages-page">
+    <h2>Manage Pages</h2>
+    <div class="form-group">
+      <label for="contactUs">Contact Us</label>
+      <textarea id="contactUs" name="contactUs" [(ngModel)]="contactUs" rows="5"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="aboutUs">About Us</label>
+      <textarea id="aboutUs" name="aboutUs" [(ngModel)]="aboutUs" rows="5"></textarea>
+    </div>
+
+    <button class="btn-submit" type="button" (click)="addInfo()">Submit</button>
+  </div>
+</div>

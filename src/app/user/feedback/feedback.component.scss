@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Container for Review Page */
+.feedBack {
+  background-color: #0288d1;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.feedback-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-title,
+.review-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.star-rating {
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 40px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star.active {
+  color: #ffd600;
+}
+
+/* Textarea for Review */
+.review-textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #0288d1;
+  background-color: #fff;
+  color: #080808;
+  font-size: 16px;
+  resize: none;
+}
+
+.review-textarea::placeholder {
+  color: #0b0c0c;
+  font-style: italic;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.back-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #c62828;
+}
+
+.submit-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #c62828;
+}

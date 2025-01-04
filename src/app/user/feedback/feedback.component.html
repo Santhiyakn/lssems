@@ -1,0 +1,25 @@
+<div class="feedBack">
+  <div>
+    <app-userside-nav></app-userside-nav>
+  </div>
+  <div class="feedback-page">
+      <button class="back-btn" type="button" [routerLink]="['/user/companies']">Back</button>
+      
+      <p class="rating-title">Rating</p>
+      <div id="star-rating" class="star-rating">
+          <span *ngFor="let star of stars; let i = index"
+                class="star"
+                [class.active]="i < rating"
+                (mouseover)="highlightStars(i + 1)"
+                (mouseout)="resetStars()"
+                (click)="setRating(i + 1)">
+            &#9733;
+          </span>
+      </div>
+      
+      <p class="review-title">Review</p>
+      <textarea [(ngModel)]="review" class="review-textarea" placeholder="Write your review here..."></textarea>
+      
+      <button class="submit-btn" type="button" (click)="feedBack()">Submit</button>
+  </div>
+</div>

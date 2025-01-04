@@ -8,6 +8,7 @@ import { MyService } from '../../my-service.service';
   styleUrl: './userside-nav.component.scss'
 })
 export class UsersideNavComponent {
+  isOpen:boolean = false;
   constructor(private apiService: ApiService, private service: MyService) { }
   logOut() {
     try {
@@ -53,6 +54,15 @@ export class UsersideNavComponent {
       console.log(error);
     }
 
+  }
+
+
+  toggleNav() {
+    this.isOpen = !this.isOpen;
+  }
+
+  closeNav() {
+    this.isOpen = false;
   }
 
 

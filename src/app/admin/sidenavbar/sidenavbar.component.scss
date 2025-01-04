@@ -49,4 +49,35 @@
   
 }
 
+
+@media screen and (max-width: 768px) {
+  .side-nav.open {
+      width: 200px; /* Adjust width for tablets */
+  }
+
+  .side-nav a {
+      font-size: 18px; /* Smaller font size for smaller screens */
+  }
+
+  .side-nav .close-btn {
+      font-size: 30px; /* Adjust close button size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .side-nav.open {
+      width: 150px; /* Adjust width for mobile screens */
+  }
+
+  .side-nav a {
+      font-size: 16px; /* Smaller font size for mobile screens */
+  }
+
+  .open-btn {
+      font-size: 16px; /* Adjust toggle button size */
+      padding: 8px 10px; /* Smaller padding for mobile screens */
+  }
+}
+
+
   

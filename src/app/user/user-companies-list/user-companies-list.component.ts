@@ -18,8 +18,8 @@ export class UserCompaniesListComponent implements OnInit {
   filterByCompany: Array<GetServiceProvider> = [];
   isFilter: boolean = false;
   rating: number = 0;
-  filterRating: number | string | null = ' ';
-  filterService: string | null = ' ';
+  filterRating: number | string | null = '';
+  filterService: string | null = '';
   filterCompanyName: string | null = null;
   filterData: Array<GetServiceProvider> = [];
   services: Array<GetService> = [];
@@ -103,7 +103,7 @@ export class UserCompaniesListComponent implements OnInit {
 
       this.apiService.getServiceProviders(pagination, sort).subscribe(
         (response) => {
-          console.log(response.data);
+          // console.log(response.data);
           this.getServiceProviders = response.data;
           this.serviceProvider = response.data;
 
@@ -128,7 +128,7 @@ export class UserCompaniesListComponent implements OnInit {
 
       this.apiService.getServiceProviders(pagination, sort).subscribe(
         (response) => {
-          console.log(response.data);
+          // console.log(response.data);
           this.service.ServiceProviders = response.data;
 
 
@@ -152,7 +152,7 @@ export class UserCompaniesListComponent implements OnInit {
           serviceName = service.name;
         }
       }
-      console.log(serviceName);
+      // console.log(serviceName);
       return serviceName;
     } catch (error) {
       console.log(error);
@@ -196,9 +196,10 @@ export class UserCompaniesListComponent implements OnInit {
   async filter() {
     try {
       this.filterData = [];
-      if (this.filterService == " " && this.filterRating == " ") {
+      console.log(this.filterRating,this.filterService)
+      if (this.filterService === "" && this.filterRating === "") {
         this.filterData = this.serviceProvider;
-        console.log(this.filterData)
+        // console.log(this.filterData)
 
       }
       else {

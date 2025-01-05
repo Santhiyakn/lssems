@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyService } from '../../my-service.service';
 import { ApiService } from '../../api.service';
 import { ActivatedRoute } from '@angular/router';
-import { GetFeedBack, GetServiceProvider, GetUser } from '../../models';
+import { GetFeedBack, GetService, GetServiceProvider, GetUser } from '../../models';
 
 @Component({
   selector: 'app-company-profile',
@@ -22,7 +22,8 @@ export class CompanyProfileComponent implements OnInit {
 
   }
   companyId: string = '';
-
+  serviceTypeName:string='';
+services: Array<GetService> = [];
   company: GetServiceProvider = {
     _id: '',
     companyName: '',
@@ -54,6 +55,8 @@ export class CompanyProfileComponent implements OnInit {
       this.apiService.getServiceProvider(this.companyId).subscribe(
         (response) => {
           this.company = response.data[0];
+          this.getService(this.company.serviceType);
+          console.log(this.company.serviceType);
         },
         (error) => {
           console.log(error);
@@ -78,6 +81,33 @@ export class CompanyProfileComponent implements OnInit {
       )
     }
     catch (error) {
+      console.log(error);
+    }
+  }
+
+
+  getService(paramsId:string|undefined) {
+    try {
+      let id = '';
+      if (paramsId) {
+        id = paramsId
+      }
+      this.apiService.getServices().subscribe(
+        (response) => {
+          this.services = response.data;
+          for (let service of this.services) {
+            
+            if (service._id === id) {
+              this.serviceTypeName = service.name;
+              // console.log(this.serviceTypeName)
+            }
+          }
+        }
+      )
+      
+     
+
+    } catch (error) {
       console.log(error);
     }
   }
